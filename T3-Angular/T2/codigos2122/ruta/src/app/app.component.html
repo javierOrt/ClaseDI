@@ -24,18 +24,12 @@
           >
         </li>
         <li class="nav-item">
-        <a 
-          class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-          aria-expanded="false"
-          [routerLink]="['/cursos']"
-          routerLinkActive="router-link-active" >
-          
-          Cursos
-        </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">DAM</a></li>
-            <li><a class="dropdown-item" href="#">DAW</a></li>
-          </ul>
+          <a
+            class="nav-link"
+            (click)="navegar()"
+            routerLinkActive="router-link-active"
+            >Curso</a
+          >
         </li>
       </ul>
     </div>

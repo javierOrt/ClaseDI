@@ -13,6 +13,6 @@ export class AppComponent {
   constructor(private navegador: Router) {}
 
   navegar() {
-    this.navegador.navigate(['curso']);
+    this.navegador.navigate(['cursos']);
   }
 }
