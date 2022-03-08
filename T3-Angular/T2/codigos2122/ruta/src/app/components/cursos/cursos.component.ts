@@ -1,4 +1,6 @@
+import { partitionArray } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'rutas-cursos',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cursos.component.css']
 })
 export class CursosComponent implements OnInit {
+  curso: String = '';
 
-  constructor() { }
+  constructor(private rutaActiva: ActivatedRoute) {}
 
   ngOnInit(): void {
+    //this.curso = this.rutaActiva.snapshot.params['cursos'];
+    //this.rutaActiva.snapshot.params['cursos'];
+    this.rutaActiva.params.subscribe((params: Params) => {
+      this.curso = console.log(params['curso']);
+    })
   }
 
 }
